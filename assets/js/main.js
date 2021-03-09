@@ -12,7 +12,6 @@ while (numeripc.length < 16) {
   }
 }
 
-
 while (numeriutente.length < numeromax - 16 && !numeripc.includes(numeriRichiesti)){
   numeriRichiesti = parseInt(prompt("Dimmi un numero"));
   if (numeripc.includes(numeriRichiesti)) {
@@ -24,19 +23,8 @@ while (numeriutente.length < numeromax - 16 && !numeripc.includes(numeriRichiest
     numeriutente.push(numeriRichiesti);
   }
 }
-console.log(numeriutente);
 
 var punteggio = numeriutente.length;
+console.log("Numeri pc : " + numeripc);
+console.log("Numeri utente indovinati: " + numeriutente);
 console.log("Hai perso. Il tuo punteggio è : " + punteggio);
-
-
-
-
-
-
-
-
-//funzione per generare numeri da 1 a 100
-function generator(numeromax){
-  return Math.floor(Math.random() * numeromax) + 1;
-}
